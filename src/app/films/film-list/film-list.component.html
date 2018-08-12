@@ -1,0 +1,16 @@
+<div class="films__list">
+  <mat-grid-list cols="5" rowHeight="350px">
+    <mat-grid-tile *ngFor="let item of activePageDataChunk">
+      <mat-card class="film__card" (click)="selectedFilm(item)">
+        <img [src]="getUrlImage(item.poster_path)" [alt]="item.title" class="film__image">
+        <mat-card-content>
+          <h2>{{item.title}}</h2>
+          <p>{{item.release_date}}</p>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+<mat-paginator [length]="length" [pageSize]="pageSize" (page)="onPageChanged($event)">
+</mat-paginator>

@@ -1,0 +1,12 @@
+.film {
+  &__card {
+    width: 170px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  &__image {
+    width: 150px;
+    margin-top: 0;
+  }
+}

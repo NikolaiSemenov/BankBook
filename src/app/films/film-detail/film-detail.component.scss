@@ -1,0 +1,18 @@
+.film-details {
+  &__wrap {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 40px 10px;
+  }
+  &__half {
+    min-width: 60%;
+    box-sizing: border-box;
+  }
+  &__image-placeholder {
+    width: 40%;
+  }
+  &__image {
+    width: 100%;
+  }
+}

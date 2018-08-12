@@ -1,0 +1,25 @@
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+.header {
+  .mat-toolbar-row {
+    width: 1200px;
+  }
+}
+.navigation {
+  &__list {
+    list-style-type: none;
+  }
+  &__item {
+    display: inline-block;
+    padding: 6px 10px;
+  }
+}
+
+.hide-autocomplete {
+  display: none;
+}

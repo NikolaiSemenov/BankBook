@@ -1,0 +1,28 @@
+<mat-toolbar class="header">
+  <mat-toolbar-row class="container">
+    <span>My Application</span>
+    <span class="example-spacer"></span>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input type="text" matInput placeholder="serch" [matAutocomplete]="auto" [formControl]="searchStr">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option (onSelectionChange)="selectedFilm(film)" *ngFor="let film of films?.results" [value]="film">
+            <img class="example-option-img" aria-hidden [src]="getUrlImage(film.poster_path)" height="25">
+            <span>{{film.title}}</span>
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+    <span class="example-spacer"></span>
+    <div class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a routerLink="/">Home</a>
+        </li>
+        <li class="navigation__item">
+          <a routerLink="/films">Films</a>
+        </li>
+      </ul>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,23 @@
+.films__list {
+  padding: 40px 10px;
+  width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.film {
+  &__card {
+    width: 170px;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  &__image {
+    width: 150px;
+    margin-top: 0;
+  }
+}
+
+mat-grid-tile {
+  height: 350px;
+}
