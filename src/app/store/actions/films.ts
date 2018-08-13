@@ -9,7 +9,6 @@ export const RESET_DETECTED_FILMS = '[Search] Reset detected films';
 export const SET_SELECTED_FILM = '[Search] Set selected film';
 export const FETCH_CATALOG_FILMS = '[Film] Fetch catalog films';
 export const SET_CATALOG_FILMS = '[Film] Set catalog films';
-export const RETRIVER_STATE = '[App] Retriver state';
 
 export class fetchDetectedFilms implements Action {
   readonly type = FETCH_DETECTED_FILMS;
@@ -45,16 +44,10 @@ export class setCatalogFilms implements Action {
   constructor(public payload: Films) {}
 }
 
-export class retriverState implements Action {
-  readonly type = RETRIVER_STATE;
-
-  constructor(public payload: {}) {}
-}
 export type filmsActions =
   | fetchDetectedFilms
   | setDetectedFilms
   | setSelectedFilm
   | fetchCatalogFilms
   | setCatalogFilms
-  | resetDetectedFilms
-  | retriverState;
+  | resetDetectedFilms;

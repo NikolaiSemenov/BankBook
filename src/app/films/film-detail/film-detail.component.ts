@@ -23,8 +23,4 @@ export class FilmDetailComponent implements OnInit {
       .select('films')
       .subscribe(data => (this.film = data.selectedFilm));
   }
-
-  getUrlImage(nameImage: string): string {
-    return this.getImageService.getImage(nameImage);
-  }
 }

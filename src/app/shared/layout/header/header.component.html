@@ -7,7 +7,7 @@
         <input type="text" matInput placeholder="serch" [matAutocomplete]="auto" [formControl]="searchStr">
         <mat-autocomplete #auto="matAutocomplete">
           <mat-option (onSelectionChange)="selectedFilm(film)" *ngFor="let film of films?.results" [value]="film">
-            <img class="example-option-img" aria-hidden [src]="getUrlImage(film.poster_path)" height="25">
+            <img class="example-option-img" aria-hidden [src]="getImageService.getImage(film.poster_path)" height="25">
             <span>{{film.title}}</span>
           </mat-option>
         </mat-autocomplete>

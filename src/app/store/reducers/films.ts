@@ -55,10 +55,6 @@ export function filmsReducer(
         ...state,
         catalogFilms: { ...newCatalogFilms }
       };
-    case filmsActions.RETRIVER_STATE:
-      return {
-        ...actions.payload
-      };
     default:
       return state;
   }

@@ -6,6 +6,7 @@ import * as fromFilms from '../../store/reducers/films';
 import * as FilmsActions from '../../store/actions/films';
 import { Film } from '../../shared/models/film.model';
 import { Subscription } from '../../../../node_modules/rxjs';
+import { GetImageService } from '../../shared/services/get-image.service';
 
 @Component({
   selector: 'app-film-list',
@@ -24,7 +25,8 @@ export class FilmListComponent implements OnInit {
 
   constructor(
     private store: Store<fromFilms.FeatureState>,
-    private router: Router
+    private router: Router,
+    private getImageService: GetImageService
   ) {}
 
   ngOnInit() {

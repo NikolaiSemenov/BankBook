@@ -1,6 +1,6 @@
 <div class="film-details__wrap">
   <div class="film-details__image-placeholder">
-    <img [src]="getUrlImage(film.poster_path)" alt="" class="film-details__image">
+    <img [src]="getImageService.getImage(film.poster_path)" alt="" class="film-details__image">
   </div>
   <div class="film-detail__half">
     <ul class="film-details">

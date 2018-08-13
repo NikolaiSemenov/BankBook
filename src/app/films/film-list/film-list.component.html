@@ -2,7 +2,7 @@
   <mat-grid-list cols="5" rowHeight="350px">
     <mat-grid-tile *ngFor="let item of activePageDataChunk">
       <mat-card class="film__card" (click)="selectedFilm(item)">
-        <img [src]="getUrlImage(item.poster_path)" [alt]="item.title" class="film__image">
+        <img [src]="getImageService.getImage(item.poster_path)" [alt]="item.title" class="film__image">
         <mat-card-content>
           <h2>{{item.title}}</h2>
           <p>{{item.release_date}}</p>
