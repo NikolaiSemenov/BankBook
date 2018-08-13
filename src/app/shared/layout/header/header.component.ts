@@ -43,8 +43,4 @@ export class HeaderComponent implements OnInit {
     this.store.dispatch(new FilmsActions.resetDetectedFilms());
     this.router.navigate(['/films', film.id]);
   }
-
-  getUrlImage(nameImage: string): string {
-    return this.getImageService.getImage(nameImage);
-  }
 }
